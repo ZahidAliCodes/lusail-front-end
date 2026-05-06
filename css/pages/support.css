@@ -1,0 +1,77 @@
+/* Support page — matches main form / card language */
+
+.support-form {
+  margin-top: 8px;
+}
+
+.support-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  margin-bottom: 16px;
+}
+
+.support-form-row:last-of-type {
+  margin-bottom: 0;
+}
+
+.support-form .form-group select,
+.support-form .form-group textarea {
+  background-color: #32335a;
+  padding: 16px;
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  min-height: 54px;
+  cursor: pointer;
+}
+
+.support-form .form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+  cursor: text;
+  line-height: 1.5;
+}
+
+.support-form .form-group select:focus,
+.support-form .form-group textarea:focus {
+  outline: none !important;
+  border-color: #01ff6a;
+}
+
+.support-form .form-group select option {
+  background: #1a1c38;
+  color: var(--color-white);
+}
+
+.support-form .form-group input:disabled,
+.support-form .form-group input[readonly] {
+  opacity: 0.75;
+  cursor: default;
+  color: #e8e8ef;
+}
+
+.support-form .btn-container {
+  margin-top: 28px;
+  justify-content: flex-end;
+}
+
+.support-form .submit-btn {
+  width: auto;
+  min-width: 200px;
+}
+
+.support-lead {
+  margin-bottom: 28px;
+  max-width: 640px;
+}
+
+@media (max-width: 768px) {
+  .support-form-row {
+    grid-template-columns: 1fr;
+  }
+}

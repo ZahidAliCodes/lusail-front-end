@@ -1,0 +1,41 @@
+{
+  "menu_home": "الرئيسية",
+  "menu_motorsport": "رياضات السيارات",
+  "menu_f1": "اف ون",
+  "menu_motogp": "موتو جي بي",
+  "menu_wec": "دبليو إي سي",
+  "menu_circuit_experiences": "تجارب الحلبة",
+  "menu_track_days": "أيام المسار",
+  "menu_driving_school": "مدرسة القيادة",
+  "menu_vip_experiences": "تجارب VIP",
+ "menu_adults": "البالغون",
+  "menu_kids": "الأطفال",
+  "menu_support": "الدعم",
+    "user_muhmoud": "محمود",
+
+
+
+  "footer_description": "تستضيف حلبة لوسيل الدولية التي تبلغ مساحتها 5.38 كم أفضل السباقات مثل F1® وMotoGP™ وWEC. مع تخطيطات مرنة، فهي مثالية للفعاليات الرياضية، المؤسسية والمجتمعية.",
+  "footer_quick_links": "روابط سريعة",
+  "footer_tenders": "المناقصات والمزادات",
+  "footer_ticket_terms": "شروط وأحكام تذاكر LIC",
+  "footer_privacy_policy": "سياسة الخصوصية LIC",
+  "footer_faq": "الأسئلة الشائعة",
+  "footer_contact": "اتصل بنا",
+  "footer_careers": "الوظائف في LIC",
+  "footer_lusail_app": "تطبيق لوسيل",
+  "footer_get_in_touch": "تواصل معنا",
+  "footer_address_label": "العنوان",
+  "footer_address_text": "حلبة لوسيل الدولية، الوصيل، طريق الشمال للإغاثة، ص.ب 23931، الدوحة، قطر",
+  "footer_hours_label": "ساعات العمل",
+  "footer_hours_text": "08:00 صباحًا - 04:00 مساءً",
+  "footer_phone_label": "الهاتف",
+  "footer_phone_text": "+974 4445 9555",
+  "footer_email_label": "البريد الإلكتروني",
+  "footer_email_text": "info@lcsc.qa",
+  "footer_terms": "الشروط والأحكام",
+  "footer_privacy": "سياسة الخصوصية",
+  "footer_copyright": "حقوق النشر © 2026. كل الحقوق محفوظة."
+
+  
+}

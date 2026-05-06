@@ -1,0 +1,104 @@
+.summary-img {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 60px 0;
+    height: 377px;
+    border-radius: 3px;
+    overflow: hidden;
+        clip-path: polygon(90% 0, 100% 20%, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 0);
+}
+
+.summary-img img {
+    width: 100%;
+    display: block;
+}
+
+.summary-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180.2deg,
+        rgba(0, 0, 0, 0) 35.41%,
+        rgba(0, 0, 0, 0.9) 75.55%
+    );
+    pointer-events: none;
+}
+
+
+.booking-status {
+    display: flex;
+    gap: 40px;
+    margin: 24px 0 60px 0;
+}
+.summary-main h1{
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
+.table-wrapper{
+    flex: 3 !important;
+}
+
+.promo-box {
+    flex: 1;
+    background: #00006A;
+    border: 1px solid #1A1A4E;
+    border-radius: 3px;
+    padding: 18px;
+    position: relative;
+}
+.promo-box img{
+    position: absolute;
+    width: fit-content;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+.promo-box p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-family: "Pilat", var(--font-main);
+    color: #FFFFFF99;
+    padding: 0 0 8px 0;
+    border-bottom: 1px solid #FFFFFF1A;
+}
+.promo-box p span{
+    color: #FF3B3B;
+}
+.promo-group{
+    margin: 12px 0 0 0;
+}
+.promo-group label{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    font-family: "Pilat", var(--font-main);
+    color: #FFFFFFCC;
+}
+
+.promo-group input{
+    padding: 12px 16px;
+    border: 1px solid #FFFFFF1A;
+    background: #FFFFFF0D;
+    border-radius: 3px;
+    width: 100%;
+    color: #ffffff;
+    font-family: "Pilat", var(--font-main);
+    font-size: 14px;
+    font-weight: 400;
+    height: 46px;
+    margin: 6px 0 0 0;
+}
+
+.promo-group input::placeholder{
+    color: #FFFFFF99;
+}

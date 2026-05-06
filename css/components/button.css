@@ -1,0 +1,94 @@
+.btn-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin: 24px 0 0 0;
+    width: fit-content;
+}
+
+.submit-btn {
+    position: relative;
+    width: 220px;
+    height: 40px;
+    background-color: #5C60FA;
+    color: var(--color-white);
+    border: none;
+    font-weight: 800;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: "Pilat Extended", "Pilat", "29LT Bukra", var(--font-main);
+    clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%);
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #27f0d2;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    clip-path: polygon(100% 0%, 100% 52%, 100% 100%, 0 100%, 20% 50%, 0 0);
+}
+
+.btn-text {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.arrow-icon {
+    position: absolute;
+    right: -50px;
+    z-index: 2;
+    font-size: 35px;
+    color: #5C60FA;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrow-icon img {
+    left: 100%;
+    position: relative;
+}
+
+.diamond {
+    min-width: 28px;
+    max-width: 28px;
+    width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    height: 28px;
+    border: var(--border-radius) solid #5C60FA;
+    transform: rotate(45deg);
+    transition: border-color 0.3s ease, transform 0.4s ease;
+}
+
+.btn-container:hover .submit-btn::before {
+    width: 80%;
+}
+
+.btn-container:hover .btn-text {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.btn-container:hover .arrow-icon {
+    right: 45%;
+}
+
+.btn-container:hover .diamond {
+    border-color: #7de7d1;
+    transform: rotate(135deg);
+}
+
+.rtl .submit-btn{
+       clip-path: polygon(12% 0%, 100% 0%, 100% 100%, 12% 100%, 0% 50%);
+
+}

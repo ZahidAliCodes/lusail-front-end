@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../assets/icons/css/all.min.css" />
+  </head>
+
+  <body class="support">
+    <div id="header-container"></div>
+
+    <section>
+      <div class="bg-right-img">
+        <div class="container">
+          <h1>Support</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-section">
+      <div class="racing-banner">
+        <img src="../assets/images/hero-img-1.svg" alt="" />
+      </div>
+      <div class="container up-side">
+        <div class="card-base">
+          <div class="login-header">
+            <h2>How can we help?</h2>
+            <p class="support-lead"
+              >Send us a message and our team will get back to you. This form is
+              for demonstration only and does not submit to a live server.</p
+            >
+          </div>
+
+          <form
+            class="submission-form support-form"
+            action="#"
+            method="post"
+            onsubmit="return false;">
+            <div class="support-form-row">
+              <div class="form-group">
+                <label for="support-email">Email</label>
+                <input
+                  id="support-email"
+                  type="email"
+                  value="member@example.com"
+                  readonly
+                  aria-readonly="true" />
+              </div>
+              <div class="form-group">
+                <label for="support-name">Full name</label>
+                <input
+                  id="support-name"
+                  type="text"
+                  value="Account holder"
+                  readonly
+                  aria-readonly="true" />
+              </div>
+            </div>
+
+            <div class="support-form-row">
+              <div class="form-group">
+                <label for="support-category">How can we help?</label>
+                <select id="support-category" name="CATEGORY" required>
+                  <option value="General Enquiry">General Enquiry</option>
+                  <option value="Schedules and Availability"
+                    >Schedules and Availability</option
+                  >
+                  <option value="Billing">Billing or Invoicing</option>
+                  <option value="Membership">Membership</option>
+                  <option value="Complaints">Complaints</option>
+                  <option value="Lost and Found">Lost and Found</option>
+                  <option value="Technical">Technical</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="support-subject">Subject</label>
+                <input
+                  id="support-subject"
+                  type="text"
+                  name="subject"
+                  required
+                  placeholder="Subject" />
+              </div>
+            </div>
+
+            <div class="support-form-row">
+              <div class="form-group" style="grid-column: 1 / -1">
+                <label for="support-message">Message</label>
+                <textarea
+                  id="support-message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Describe your question or issue"></textarea>
+              </div>
+            </div>
+
+            <div class="btn-container">
+              <button class="submit-btn" type="submit">
+                <span class="btn-text">Send message</span>
+                <span class="arrow-icon">
+                  <img src="../assets/images/arrow-right.svg" alt="" />
+                </span>
+              </button>
+              <div class="diamond"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

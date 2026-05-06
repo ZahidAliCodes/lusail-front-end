@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sessions</title>
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/pages/sessions.css" />
+  <link rel="stylesheet" href="../assets/icons/css/all.min.css" />
+</head>
+
+<body class="home">
+
+  <div id="header-container"></div>
+
+  <section>
+    <div class="bg-right-img">
+      <div class="container">
+        <h1>EVENTS REGISTRATION</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-section">
+
+    <div class="racing-banner">
+      <img src="../assets/images/hero-img-1.svg" alt="hero" />
+    </div>
+
+    <div class="container up-side">
+
+      <section id="step-2" class="step-event active">
+
+        <div class="card-base card-base-main">
+
+          <button class="back-nav" type="button"
+            onclick="window.location.href='../index.html'">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none">
+              <path
+                d="M21 0.45C20.85 0.15 20.55 0 20.25 0H12.75C12.45 0 12.3 0.15 12.15 0.3L3.15 11.55C3 11.85 3 12.15 3.15 12.45L11.4 23.7C11.55 23.85 11.7 24 12 24H20.25C20.55 24 20.85 23.85 21 23.55C21 23.25 21 22.95 20.85 22.8L12.15 12L20.85 1.2C21 1.05 21 0.9 21 0.75V0.45Z"
+                fill="currentColor" />
+            </svg>
+
+            <span id="selectedEventTitle">Back to Events</span>
+          </button>
+
+          <div class="hero-img-wrapper">
+            <img id="selectedEventImg" class="hero-img" src="" alt="event image" />
+          </div>
+
+          <h3>Available Sessions</h3>
+
+          <div class="date-grid">
+
+            <button class="date-btn" type="button"
+              onclick="goToStep3(this)">
+              11 February 2026
+              <i class="fa-regular fa-arrow-right-long"></i>
+            </button>
+
+            <button class="date-btn" type="button"
+              onclick="goToStep3(this)">
+              12 February 2026
+              <i class="fa-regular fa-arrow-right-long"></i>
+            </button>
+
+            <button class="date-btn" type="button"
+              onclick="goToStep3(this)">
+              13 February 2026
+              <i class="fa-regular fa-arrow-right-long"></i>
+            </button>
+
+            <button class="date-btn" type="button"
+              onclick="goToStep3(this)">
+              14 February 2026
+              <i class="fa-regular fa-arrow-right-long"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="../js/main.js"></script>
+
+  <!-- STEP LOGIC -->
+  <script src="../js/components/stepform.js"></script>
+
+</body>
+</html>

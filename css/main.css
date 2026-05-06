@@ -1,0 +1,923 @@
+@import url("../css/components/header.css");
+@import url("../css/components/button.css");
+@import url("../css/components/footer.css");
+@import url("../css/pages/login.css");
+@import url("../css/pages/register.css");
+@import url("../css/pages/support.css");
+@import url("../css/pages/forgot-password.css");
+
+/* =============================
+   RESET
+============================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =============================
+   ROOT VARIABLES
+============================= */
+:root {
+  /* Colors */
+  --color-primary: #26f0d2;
+  --color-primary-hover: #26f0d240;
+  --color-bg: #0c0b1a;
+  --color-white: #ffffff;
+  /* Fonts */
+  --font-main: "Arial", sans-serif;
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 32px;
+  /* Borders */
+  --border-radius: 3px;
+  /* Direction */
+  --direction: ltr;
+  --text-align: left;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* =============================
+   RTL SUPPORT
+============================= */
+[dir="rtl"] {
+  --direction: rtl;
+  --text-align: right;
+}
+
+/* =============================
+   FONTS
+============================= */
+/* Pilat Extended Fonts */
+@font-face {
+  font-family: "Pilat Extended";
+  src:
+    url("../assets/fonts/PilatExtended-Thin.woff2") format("woff2"),
+    url("../assets/fonts/PilatExtended-Thin.woff") format("woff"),
+    url("../assets/fonts/PilatExtended-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pilat Extended";
+  src:
+    url("../assets/fonts/PilatExtended-Light.woff2") format("woff2"),
+    url("../assets/fonts/PilatExtended-Light.woff") format("woff"),
+    url("../assets/fonts/PilatExtended-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pilat Extended";
+  src:
+    url("../assets/fonts/PilatExtended-Regular.woff2") format("woff2"),
+    url("../assets/fonts/PilatExtended-Regular.woff") format("woff"),
+    url("../assets/fonts/PilatExtended-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pilat Extended";
+  src:
+    url("../assets/fonts/PilatExtended-DemiBold.woff2") format("woff2"),
+    url("../assets/fonts/PilatExtended-DemiBold.woff") format("woff"),
+    url("../assets/fonts/PilatExtended-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pilat Extended";
+  src:
+    url("../assets/fonts/PilatExtended-Bold.woff2") format("woff2"),
+    url("../assets/fonts/PilatExtended-Bold.woff") format("woff"),
+    url("../assets/fonts/PilatExtended-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pilat Extended";
+  src:
+    url("../assets/fonts/PilatExtended-Heavy.woff2") format("woff2"),
+    url("../assets/fonts/PilatExtended-Heavy.woff") format("woff"),
+    url("../assets/fonts/PilatExtended-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Pilat Fonts */
+@font-face {
+  font-family: "Pilat";
+  src:
+    url("../assets/fonts/Pilat-Thin.woff2") format("woff2"),
+    url("../assets/fonts/Pilat-Thin.woff") format("woff"),
+    url("../assets/fonts/Pilat-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pilat";
+  src:
+    url("../assets/fonts/Pilat-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Pilat-Regular.woff") format("woff"),
+    url("../assets/fonts/Pilat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pilat";
+  src:
+    url("../assets/fonts/Pilat-DemiBold.woff2") format("woff2"),
+    url("../assets/fonts/Pilat-DemiBold.woff") format("woff"),
+    url("../assets/fonts/Pilat-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pilat";
+  src:
+    url("../assets/fonts/Pilat-Bold.woff2") format("woff2"),
+    url("../assets/fonts/Pilat-Bold.woff") format("woff"),
+    url("../assets/fonts/Pilat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pilat";
+  src:
+    url("../assets/fonts/Pilat-Black.woff2") format("woff2"),
+    url("../assets/fonts/Pilat-Black.woff") format("woff"),
+    url("../assets/fonts/Pilat-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 29LT Bukra Fonts */
+@font-face {
+  font-family: "29LT Bukra";
+  src:
+    url("../assets/fonts/29LTBukra-Regular.woff2") format("woff2"),
+    url("../assets/fonts/29LTBukra-Regular.woff") format("woff"),
+    url("../assets/fonts/29LTBukra-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "29LT Bukra";
+  src:
+    url("../assets/fonts/29LTBukra-Bold.woff2") format("woff2"),
+    url("../assets/fonts/29LTBukra-Bold.woff") format("woff"),
+    url("../assets/fonts/29LTBukra-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =============================
+   BASE STYLES
+============================= */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  font-family: "Pilat Extended", "Pilat", "29LT Bukra", var(--font-main);
+  direction: var(--direction);
+  text-align: var(--text-align);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Pilat Extended", "Pilat", var(--font-main);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+select,
+textarea,
+input {
+  border: none;
+  outline: none;
+  font-family: "Pilat", var(--font-main);
+}
+
+button {
+  font-family: "Pilat Extended", "Pilat", var(--font-main);
+  border: none;
+  background: transparent;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.bg-right-img {
+  background-image: url("../assets/images/frame-2.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  width: 100%;
+  height: 700px;
+  position: relative;
+}
+
+.bg-right-img .container {
+  position: relative;
+  height: 100%;
+}
+
+.bg-right-img .container h1 {
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--color-white);
+  text-transform: uppercase;
+  position: absolute;
+  top: 30%;
+  max-width: 1000px;
+}
+
+/* =========================
+   MAIN SECTION & BANNER
+========================= */
+.main-section {
+  margin-top: -326px;
+}
+
+/* =========================
+
+RACING BANNER
+
+========================= */
+.racing-banner {
+  position: relative;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(5px);
+  height: 600px;
+  padding: 30px 0 0 0;
+  clip-path: polygon(90% 0, 100% 20%, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 0);
+  overflow: hidden;
+}
+
+.racing-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.container.up-side {
+  margin-top: -490px;
+  position: relative;
+  z-index: 10;
+}
+
+/* =========================
+   base CARD (Glassmorphism)
+========================= */
+.card-base {
+  background: #5c61fa33;
+  border-radius: 10px;
+  padding: 60px 40px;
+  margin: 48px 0 74px 0;
+}
+
+.card-base h2 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+  letter-spacing: 1px;
+}
+
+.card-base p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #ffffff;
+  opacity: 70%;
+  font-family: "Pilat", sans-serif;
+}
+
+.submission-form {
+  margin: 14px 0 11px 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+.form-grid-2 {
+  gap: 40px 16px !important;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: -webkit-fill-available;
+}
+
+label {
+  text-align: start;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #f5f5f5;
+  font-family: "Pilat", var(--font-main);
+}
+
+.form-grid-3 .select-trigger,
+.phone-input-group input,
+.form-group input {
+  background-color: #32335a;
+  padding: 16px;
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  width: 100%;
+  border: 1px solid transparent;
+  min-height: 54px;
+  max-height: 54px;
+  height: 54px;
+}
+
+.form-grid-3 .select-trigger {
+  justify-content: space-between;
+}
+
+.form-grid-3 i {
+  color: var(--color-primary);
+  font-size: 18px;
+}
+
+.select-trigger span {
+  color: #adadbc;
+}
+
+.custom-select.has-value .prefix-text {
+  color: var(--color-white);
+}
+
+.form-group input:focus {
+  outline: none !important;
+  border-color: #01ff6a;
+}
+
+.phone-input-group {
+  display: flex;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background-color: #32335a;
+  transition: border-color 0.3s;
+  min-height: 54px;
+  max-height: 54px;
+  height: 54px;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.number-wrapper input,
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.number-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.toggle-phone {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #17ac66;
+  font-size: 18px;
+}
+
+.toggle-phone,
+.toggle-password {
+  position: absolute;
+  right: 16px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.phone-input-group input {
+  padding-left: 4px !important;
+}
+
+.phone-input-group:focus-within {
+  border-color: #01ff6a;
+}
+
+.phone-input-group input {
+  border: none;
+}
+
+.custom-select {
+  position: relative;
+  background: #ffffff33;
+  border-radius: 4px;
+  display: flex;
+  margin: 7px 16px 7px 8px;
+}
+
+.prefix-flag img {
+  width: 24px;
+  height: 18px;
+  display: block;
+  border: 1px solid #cecece;
+}
+
+.select-trigger {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 10px 16px;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  pointer-events: none;
+  font-family: "Pilat", var(--font-main);
+}
+
+.chevron {
+  width: 12px;
+  height: 12px;
+  stroke: #a0a0ab;
+  stroke-width: 3;
+  transition:
+    transform 0.3s ease,
+    stroke 0.3s ease;
+}
+
+.custom-select.focus .chevron {
+  transform: rotate(180deg);
+  stroke: #00ffcc;
+}
+
+.custom-select select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.phone-input-group input:focus {
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #adadbc;
+}
+
+.forgot-link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--color-primary);
+  font-family: "Pilat", sans-serif;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.signup-text {
+  margin: 29px 0 0 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.6%;
+  color: #ffffff;
+  font-family: "Pilat", sans-serif;
+}
+
+.signup-text a {
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 0.6%;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+input.error {
+  border: 1px solid red !important;
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.15);
+}
+
+.flex-main {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  align-items: end;
+}
+
+.form-grid-3 .custom-select {
+  margin: 0;
+}
+
+/* Radio Group */
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.radio-item input {
+  display: none;
+}
+
+/* Custom Radio */
+.custom-radio {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #00e6b8;
+  border-radius: 50%;
+  position: relative;
+}
+
+.radio-item input:checked+.custom-radio::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #00e6b8;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.or-text {
+  color: var(--color-white);
+  font-size: 16px;
+  font-family: "Pilat", var(--font-main);
+}
+
+.card-base-main {
+  position: relative;
+  background: #5c61fa4a !important;
+}
+
+/* Step Control */
+.step-event {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.step-event.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.back-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: 800;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.event-info .cyan-text {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.9%;
+  color: var(--color-primary);
+  opacity: unset;
+}
+
+.event-info .btn-container {
+  margin: 16px 0 0 0;
+}
+
+
+
+/* STEP 1 */
+.tabs {
+  border-bottom: 1px solid #ffffff1a;
+  margin: 36px 0 48px 0;
+  width: 84%;
+}
+
+.tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #ffffffcc;
+  line-height: 16px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  color: #26f0d2;
+  border-bottom: 2px solid #26f0d2;
+}
+
+.event-grid-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 48px 30px;
+}
+
+.event-grid-main[hidden] {
+  display: none !important;
+}
+
+.event-item-card {
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  height: 350px;
+}
+
+.event-img {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* 🔥 Gradient overlay */
+.event-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180.2deg,
+      rgba(0, 0, 0, 0) 35.41%,
+      rgba(0, 0, 0, 0.9) 75.55%);
+  pointer-events: none;
+}
+
+.event-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0 24px 24px 24px;
+}
+
+.step-event h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  letter-spacing: 0.6px;
+  font-family: "Pilat", var(--font-main);
+}
+.top-right {
+    width: max-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #252a50;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 450px;
+  position: relative;
+}
+
+/* =========================
+   RESPONSIVE QUERIES
+========================= */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .login-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-grid-main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container.up-side {
+    margin-top: -300px;
+  }
+
+  .bg-right-img .container h1 {
+    font-size: 30px;
+    top: 50%;
+  }
+
+  .step-event h3,
+  .back-nav,
+  .card-base h2 {
+    font-size: 30px;
+  }
+
+  .bg-right-img {
+    height: 320px;
+  }
+
+  .main-section {
+    margin-top: -60px;
+  }
+
+  .racing-banner {
+    height: 350px;
+  }
+
+  .login-card {
+    width: 90%;
+  }
+
+  .hero-img-wrapper {
+    margin-top: 40px;
+  }
+
+  .back-nav svg {
+    height: 18px;
+    width: 18px;
+  }
+
+  .flex-main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .bg-right-img .container h1 {
+    font-size: 20px;
+    width: 90%;
+  }
+
+  .step-event h3,
+  .back-nav {
+    font-size: 20px;
+  }
+
+  .main-section {
+    margin-top: -80px;
+  }
+
+  .card-base {
+    padding: 30px;
+  }
+
+  .card-base h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .tabs {
+    width: 100%;
+  }
+
+  .card-base p {
+    font-size: 16px;
+  }
+
+  .select-trigger {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .card-base {
+    padding: 30px 20px;
+  }
+
+  .tab-btn {
+    font-size: 14px;
+  }
+
+  .event-info {
+    padding: 0 15px 15px 15px;
+  }
+
+  .event-info .btn-container {
+    width: 200px;
+  }
+}

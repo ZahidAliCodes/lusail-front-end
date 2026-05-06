@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Interview Request Form</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="assets/icons/css/all.min.css" />
+</head>
+
+<body class="home">
+
+  <div id="header-container"></div>
+
+  <section>
+    <div class="bg-right-img">
+      <div class="container">
+        <h1>EVENTS REGISTRATION</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-section">
+
+    <div class="racing-banner">
+      <img src="assets/images/hero-img-1.svg" alt="hero" />
+    </div>
+
+    <div class="container up-side">
+
+      <section id="step-1" class="step-event active">
+
+        <div class="card-base card-base-main">
+          <h2>Events</h2>
+
+          <!-- TABS -->
+          <div class="tabs" id="events-tabs">
+            <button class="tab-btn active"><span>ADULTS</span></button>
+            <button class="tab-btn"><span>KIDS</span></button>
+          </div>
+
+          <!-- ADULTS -->
+          <div class="event-grid-main event-grid-adults">
+
+            <div class="event-item-card" data-title="Mixed Training Day"
+              data-img="assets/images/mixed-training-day.png">
+
+              <div class="event-img"
+                style="background-image:url(assets/images/mixed-training-day.png);"></div>
+
+              <div class="event-info">
+                <p class="cyan-text">Mixed Training Day</p>
+
+                <div class="btn-container">
+                  <button class="submit-btn" type="button"
+                    onclick="goToStep(2, this.closest('.event-item-card'))">
+                    <span class="btn-text">Book Now</span>
+                    <span class="arrow-icon">
+                      <img src="assets/images/arrow-right.svg" alt="arrow" />
+                    </span>
+                  </button>
+                  <div class="diamond"></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="event-item-card" data-title="Karting"
+              data-img="assets/images/karting.png">
+
+              <div class="event-img"
+                style="background-image:url(assets/images/karting.png);"></div>
+
+              <div class="event-info">
+                <p class="cyan-text">Karting</p>
+
+                <div class="btn-container">
+                  <button class="submit-btn" type="button"
+                    onclick="goToStep(2, this.closest('.event-item-card'))">
+                    <span class="btn-text">Book Now</span>
+                    <span class="arrow-icon">
+                      <img src="assets/images/arrow-right.svg" alt="arrow" />
+                    </span>
+                  </button>
+                  <div class="diamond"></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="event-item-card" data-title="Car Track Day"
+              data-img="assets/images/car-track-day.png">
+
+              <div class="event-img"
+                style="background-image:url(assets/images/car-track-day.png);"></div>
+
+              <div class="event-info">
+                <p class="cyan-text">Car Track Day</p>
+
+                <div class="btn-container">
+                  <button class="submit-btn" type="button"
+                    onclick="goToStep(2, this.closest('.event-item-card'))">
+                    <span class="btn-text">Book Now</span>
+                    <span class="arrow-icon">
+                      <img src="assets/images/arrow-right.svg" alt="arrow" />
+                    </span>
+                  </button>
+                  <div class="diamond"></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="event-item-card" data-title="Car Track Day - Passenger"
+              data-img="assets/images/car-track-day.png">
+
+              <div class="event-img"
+                style="background-image:url(assets/images/car-track-day.png);"></div>
+
+              <div class="event-info">
+                <p class="cyan-text">Car Track Day - Passenger</p>
+
+                <div class="btn-container">
+                  <button class="submit-btn" type="button"
+                    onclick="goToStep(2, this.closest('.event-item-card'))">
+                    <span class="btn-text">Book Now</span>
+                    <span class="arrow-icon">
+                      <img src="assets/images/arrow-right.svg" alt="arrow" />
+                    </span>
+                  </button>
+                  <div class="diamond"></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="event-item-card" data-title="Motorbike Track Day"
+              data-img="assets/images/motorbike-track-day.png">
+
+              <div class="event-img"
+                style="background-image:url(assets/images/motorbike-track-day.png);"></div>
+
+              <div class="event-info">
+                <p class="cyan-text">Motorbike Track Day</p>
+
+                <div class="btn-container">
+                  <button class="submit-btn" type="button"
+                    onclick="goToStep(2, this.closest('.event-item-card'))">
+                    <span class="btn-text">Book Now</span>
+                    <span class="arrow-icon">
+                      <img src="assets/images/arrow-right.svg" alt="arrow" />
+                    </span>
+                  </button>
+                  <div class="diamond"></div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- KIDS -->
+          <div class="event-grid-main event-grid-kids" hidden>
+
+            <div class="event-item-card" data-title="Mixed Training Day"
+              data-img="assets/images/mixed-training-day.png">
+
+              <div class="event-img"
+                style="background-image:url(assets/images/mixed-training-day.png);"></div>
+
+              <div class="event-info">
+                <p class="cyan-text">Mixed Training Day</p>
+
+                <div class="btn-container">
+                  <button class="submit-btn" type="button"
+                    onclick="goToStep(2, this.closest('.event-item-card'))">
+                    <span class="btn-text">Book Now</span>
+                    <span class="arrow-icon">
+                      <img src="assets/images/arrow-right.svg" alt="arrow" />
+                    </span>
+                  </button>
+                  <div class="diamond"></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="event-item-card" data-title="Karting for 13+ years"
+              data-img="assets/images/karting.png">
+
+              <div class="event-img"
+                style="background-image:url(assets/images/karting.png);"></div>
+
+              <div class="event-info">
+                <p class="cyan-text">Karting for 13+ years</p>
+
+                <div class="btn-container">
+                  <button class="submit-btn" type="button"
+                    onclick="goToStep(2, this.closest('.event-item-card'))">
+                    <span class="btn-text">Book Now</span>
+                    <span class="arrow-icon">
+                      <img src="assets/images/arrow-right.svg" alt="arrow" />
+                    </span>
+                  </button>
+                  <div class="diamond"></div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/components/stepform.js"></script>
+
+</body>
+
+</html>

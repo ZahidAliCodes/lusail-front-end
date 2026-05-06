@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calendar</title>
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/pages/calendar.css" />
+    <link rel="stylesheet" href="../assets/icons/css/all.min.css" />
+  </head>
+
+  <body class="home">
+    <div id="header-container"></div>
+
+    <section>
+      <div class="bg-right-img">
+        <div class="container">
+          <h1>EVENTS REGISTRATION</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-section">
+      <div class="racing-banner">
+        <img src="../assets/images/hero-img-1.svg" alt="hero" />
+      </div>
+
+      <div class="container up-side">
+        <section id="step-3" class="step-event active">
+          <div class="card-base card-base-main">
+            <img
+              src="../assets/images/corner-arrow.svg"
+              class="top-right"
+              alt="arrow" />
+
+            <!-- BACK -->
+            <button
+              class="back-nav"
+              type="button"
+              onclick="window.location.href = 'sessions.html'">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none">
+                <path
+                  d="M21 0.45C20.85 0.15 20.55 0 20.25 0H12.75C12.45 0 12.3 0.15 12.15 0.3L3.15 11.55C3 11.85 3 12.15 3.15 12.45L11.4 23.7C11.55 23.85 11.7 24 12 24H20.25C20.55 24 20.85 23.85 21 23.55C21 23.25 21 22.95 20.85 22.8L12.15 12L20.85 1.2C21 1.05 21 0.9 21 0.75V0.45Z"
+                  fill="currentColor" />
+              </svg>
+              <span id="selectedEventTitleStep3Nav"></span>
+            </button>
+
+            <div class="lk-calendar-layout">
+              <!-- LEFT SIDE -->
+              <div class="lk-calendar-box">
+                <div class="lk-header">
+                  <div class="lk-select">
+                    <div class="ik-icon">
+                      <i class="fa-regular fa-calendar"></i>
+                    </div>
+                    <span>SELECT DATE</span>
+                  </div>
+
+                  <div class="lk-month">
+                    <span class="lk-prev"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="7"
+                        height="12"
+                        viewBox="0 0 7 12"
+                        fill="none">
+                        <path
+                          d="M5.83325 10.834L0.833252 5.83398L5.83325 0.833984"
+                          stroke="#26F0D2"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" /></svg
+                    ></span>
+                    <h4>APRIL 2026</h4>
+                    <span class="lk-next">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="7"
+                        height="12"
+                        viewBox="0 0 7 12"
+                        fill="none">
+                        <path
+                          d="M0.833252 10.834L5.83325 5.83398L0.833252 0.833984"
+                          stroke="#26F0D2"
+                          stroke-width="1.66667"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- ============================= -->
+                <!-- DAYS GRID (FIXED VERSION) -->
+                <!-- ============================= -->
+                <div class="lk-grid">
+                  <!-- WEEK 1 -->
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="1 MON"
+                    onclick="goToSlot(this)"
+                    >1<small>MON</small><span>2/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="2 TUE"
+                    onclick="goToSlot(this)"
+                    >2<small>TUE</small><span>2/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="3 WED"
+                    onclick="goToSlot(this)"
+                    >3<small>WED</small><span>0/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="4 THU"
+                    onclick="goToSlot(this)"
+                    >4<small>THU</small><span>4/5</span></div
+                  >
+
+                  <div
+                    class="lk-day lk-available lk-active"
+                    data-date="5 FRI"
+                    onclick="goToSlot(this)"
+                    >5<small>FRI</small><span>3/5</span></div
+                  >
+
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="6 SAT"
+                    onclick="goToSlot(this)"
+                    >6<small>SAT</small><span>0/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-available"
+                    data-date="7 SUN"
+                    onclick="goToSlot(this)"
+                    >7<small>SUN</small><span>3/5</span></div
+                  >
+
+                  <!-- WEEK 2 -->
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="8 MON"
+                    onclick="goToSlot(this)"
+                    >8<small>MON</small><span>0/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-available"
+                    data-date="9 TUE"
+                    onclick="goToSlot(this)"
+                    >9<small>TUE</small><span>5/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-available"
+                    data-date="10 WED"
+                    onclick="goToSlot(this)"
+                    >10<small>WED</small><span>3/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="11 THU"
+                    onclick="goToSlot(this)"
+                    >11<small>THU</small><span>0/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-limited"
+                    data-date="12 FRI"
+                    onclick="goToSlot(this)"
+                    >12<small>FRI</small><span>1/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-available"
+                    data-date="13 SAT"
+                    onclick="goToSlot(this)"
+                    >13<small>SAT</small><span>3/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="14 SUN"
+                    onclick="goToSlot(this)"
+                    >14<small>SUN</small><span>0/5</span></div
+                  >
+
+                  <!-- WEEK 3 -->
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="15 MON"
+                    onclick="goToSlot(this)"
+                    >15<small>MON</small><span>0/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="16 TUE"
+                    onclick="goToSlot(this)"
+                    >16<small>TUE</small><span>0/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-limited"
+                    data-date="17 WED"
+                    onclick="goToSlot(this)"
+                    >17<small>WED</small><span>1/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-available"
+                    data-date="18 THU"
+                    onclick="goToSlot(this)"
+                    >18<small>THU</small><span>5/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="19 FRI"
+                    onclick="goToSlot(this)"
+                    >19<small>FRI</small><span>0/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-available"
+                    data-date="20 SAT"
+                    onclick="goToSlot(this)"
+                    >20<small>SAT</small><span>2/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="21 SUN"
+                    onclick="goToSlot(this)"
+                    >21<small>SUN</small><span>0/5</span></div
+                  >
+
+                  <!-- WEEK 4 -->
+                  <div
+                    class="lk-day lk-limited"
+                    data-date="22 MON"
+                    onclick="goToSlot(this)"
+                    >22<small>MON</small><span>1/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-available"
+                    data-date="23 TUE"
+                    onclick="goToSlot(this)"
+                    >23<small>TUE</small><span>5/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-disabled"
+                    data-date="24 WED"
+                    onclick="goToSlot(this)"
+                    >24<small>WED</small><span>0/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-limited"
+                    data-date="25 THU"
+                    onclick="goToSlot(this)"
+                    >25<small>THU</small><span>2/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-available"
+                    data-date="26 FRI"
+                    onclick="goToSlot(this)"
+                    >26<small>FRI</small><span>3/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-available"
+                    data-date="27 SAT"
+                    onclick="goToSlot(this)"
+                    >27<small>SAT</small><span>3/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-limited"
+                    data-date="28 SUN"
+                    onclick="goToSlot(this)"
+                    >28<small>SUN</small><span>2/5</span></div
+                  >
+
+                  <!-- WEEK 5 -->
+                  <div
+                    class="lk-day lk-limited"
+                    data-date="29 MON"
+                    onclick="goToSlot(this)"
+                    >29<small>MON</small><span>1/5</span></div
+                  >
+                  <div
+                    class="lk-day lk-available"
+                    data-date="30 TUE"
+                    onclick="goToSlot(this)"
+                    >30<small>TUE</small><span>4/5</span></div
+                  >
+                </div>
+                <div class="lk-legend">
+                  <span><i class="lk-dot lk-green"></i> Available</span>
+                  <span><i class="lk-dot lk-red"></i> Limited</span>
+                  <span><i class="lk-dot lk-gray"></i> Sold out</span>
+                </div>
+              </div>
+
+              <!-- RIGHT SIDE -->
+              <div class="lk-sidebar-info">
+                <div class="idk-img">
+                  <img id="selectedEventImgStep3" src="" alt="event image" />
+                </div>
+
+                <h3 id="selectedEventTitleStep3"></h3>
+
+                <p>
+                  Experience the thrill of our Motorbike Track Day at the
+                  esteemed LIC Qatar circuit. Tailored for motorbike
+                  enthusiasts, this event offers a secure and expertly
+                  supervised environment to fully unleash your bike's
+                  capabilities. Whether you're new to track riding or a seasoned
+                  expert, you'll have the chance to enhance your riding skills,
+                  master cornering techniques, and gain confidence at higher
+                  speeds. Benefit from structured sessions, comprehensive safety
+                  briefings, and plenty of track time, striking the ideal mix of
+                  education and excitement. It's about skillful execution,
+                  precise control, and the sheer joy of riding on a top-tier
+                  track.
+                </p>
+                <br />
+                <p>
+                  Our Motorbike Track Day is more than just an event; it's an
+                  opportunity to connect with fellow riders, share experiences,
+                  and immerse yourself in the culture of motorsports. With
+                  expert guidance and a supportive atmosphere, you'll leave with
+                  improved skills, newfound confidence, and memories that will
+                  last a lifetime. Join us for a day where passion meets
+                  performance on the track.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/components/stepform.js"></script>
+  </body>
+</html>
