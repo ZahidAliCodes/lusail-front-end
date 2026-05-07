@@ -18,3 +18,101 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.querySelectorAll(".u-nexus-upload-container").forEach((container) => {
+  const dropZone = container.querySelector(".u-nexus-dropzone");
+  const fileInput = container.querySelector(".u-nexus-file-input");
+  const fileListContainer = container.querySelector(".u-nexus-file-list");
+  const uploadBtn = container.querySelector(".u-nexus-upload-btn");
+
+  let selectedFiles = [];
+
+  uploadBtn.addEventListener("click", () => {
+    fileInput.click();
+  });
+
+  ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
+    dropZone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  });
+
+  dropZone.addEventListener("dragover", () => {
+    dropZone.classList.add("dragover");
+  });
+
+  dropZone.addEventListener("dragleave", () => {
+    dropZone.classList.remove("dragover");
+  });
+
+  dropZone.addEventListener("drop", (e) => {
+    dropZone.classList.remove("dragover");
+
+    handleFiles(e.dataTransfer.files);
+  });
+
+  fileInput.addEventListener("change", function () {
+    handleFiles(this.files);
+  });
+
+  function handleFiles(files) {
+    Array.from(files).forEach((file) => {
+      if (!file.type.startsWith("image/")) return;
+
+      selectedFiles.push(file);
+    });
+
+    renderFileList();
+
+    fileInput.value = "";
+  }
+
+  function renderFileList() {
+    fileListContainer.innerHTML = "";
+
+    selectedFiles.forEach((file, index) => {
+      const reader = new FileReader();
+
+      const item = document.createElement("div");
+
+      item.className = "u-nexus-file-item";
+
+      reader.onload = (e) => {
+        item.innerHTML = `
+                    <button class="u-nexus-remove-btn">×</button>
+                    <img src="${e.target.result}" alt="preview">
+                    <div class="u-nexus-file-name">${file.name}</div>
+                `;
+
+        item
+          .querySelector(".u-nexus-remove-btn")
+          .addEventListener("click", () => {
+            selectedFiles.splice(index, 1);
+
+            renderFileList();
+          });
+      };
+
+      reader.readAsDataURL(file);
+
+      fileListContainer.appendChild(item);
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const addVehicleBtn = document.getElementById("addVehicleBtn");
+  const vehicleTableSection = document.getElementById("vehicleTableSection");
+  const vehicleFormSection = document.getElementById("vehicleFormSection");
+
+  if (!addVehicleBtn || !vehicleTableSection || !vehicleFormSection) return;
+
+  // ========================
+  // SHOW FORM / HIDE TABLE
+  // ========================
+  addVehicleBtn.addEventListener("click", () => {
+    vehicleTableSection.style.display = "none";
+    vehicleFormSection.style.display = "block";
+  });
+});
