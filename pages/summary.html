@@ -42,8 +42,7 @@
                     <img src="../assets/images/corner-arrow.svg" class="top-right" alt="arrow" />
 
                     <button class="back-nav" onclick="window.location.href='slots.html'">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path
                                 d="M21 0.45C20.85 0.15 20.55 0 20.25 0H12.75C12.45 0 12.3 0.15 12.15 0.3L3.15 11.55C3 11.85 3 12.15 3.15 12.45L11.4 23.7C11.55 23.85 11.7 24 12 24H20.25C20.55 24 20.85 23.85 21 23.55C21 23.25 21 22.95 20.85 22.8L12.15 12L20.85 1.2C21 1.05 21 0.9 21 0.75V0.45Z"
                                 fill="currentColor" />
@@ -125,7 +124,7 @@
                                     <span class="agreement-text">
                                         I have read and agree to the
                                         <a href="https://members.lcsc.qa/login">LCSC Disclaimer</a>
-                                        Terms and Conditions
+                                        <span>Terms and Conditions</span>
                                     </span>
                                 </div>
 
@@ -135,7 +134,7 @@
                                     <span class="agreement-text">
                                         I have read and agree to the
                                         <a href="https://members.lcsc.qa/login">Rules and Regulations</a>
-                                        Terms and Conditions
+                                        <span>Terms and Conditions</span>
                                     </span>
                                 </div>
 
@@ -239,40 +238,27 @@
         <div class="otp-box" id="otpCard">
 
             <span class="close-icon" id="closePaymentModal">
-                <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 20 20"
-            fill="none">
-            <path
-              d="M15 5L5 15"
-              stroke="white"
-              stroke-opacity="0.6"
-              stroke-width="1.66667"
-              stroke-linecap="round"
-              stroke-linejoin="round" />
-            <path
-              d="M5 5L15 15"
-              stroke="white"
-              stroke-opacity="0.6"
-              stroke-width="1.66667"
-              stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" fill="none">
+                    <path d="M15 5L5 15" stroke="white" stroke-opacity="0.6" stroke-width="1.66667"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5 5L15 15" stroke="white" stroke-opacity="0.6" stroke-width="1.66667"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </span>
 
             <div class="otp-lock">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="19" viewBox="0 0 25 19" fill="none">
-<path d="M24.4025 2.71761C24.403 3.0746 24.3329 3.42815 24.1962 3.75797C24.0596 4.08778 23.8592 4.38736 23.6065 4.63948L10.965 17.2801C10.7126 17.5326 10.413 17.7329 10.0831 17.8696C9.75332 18.0062 9.3998 18.0766 9.04278 18.0766C8.68576 18.0766 8.33224 18.0062 8.00242 17.8696C7.67259 17.7329 7.37292 17.5326 7.12051 17.2801L0.82286 10.9832C0.564711 10.7321 0.359039 10.4321 0.217791 10.1008C0.0765436 9.76949 0.00253473 9.41341 6.39769e-05 9.05324C-0.00240677 8.69308 0.0667097 8.33602 0.203399 8.00279C0.340088 7.66957 0.541625 7.36682 0.796303 7.11215C1.05098 6.85747 1.35373 6.65593 1.68695 6.51924C2.02018 6.38255 2.37724 6.31344 2.7374 6.31591C3.09756 6.31838 3.45364 6.39239 3.78496 6.53363C4.11628 6.67488 4.41623 6.88055 4.66739 7.1387L9.04239 11.5137L19.7619 0.795734C20.1421 0.41574 20.6265 0.156988 21.1537 0.0521788C21.6809 -0.0526303 22.2274 0.00120817 22.7241 0.20689C23.2207 0.412571 23.6452 0.760865 23.944 1.20775C24.2427 1.65464 24.4023 2.18006 24.4025 2.71761Z" fill="white"/>
-</svg>
+                    <path
+                        d="M24.4025 2.71761C24.403 3.0746 24.3329 3.42815 24.1962 3.75797C24.0596 4.08778 23.8592 4.38736 23.6065 4.63948L10.965 17.2801C10.7126 17.5326 10.413 17.7329 10.0831 17.8696C9.75332 18.0062 9.3998 18.0766 9.04278 18.0766C8.68576 18.0766 8.33224 18.0062 8.00242 17.8696C7.67259 17.7329 7.37292 17.5326 7.12051 17.2801L0.82286 10.9832C0.564711 10.7321 0.359039 10.4321 0.217791 10.1008C0.0765436 9.76949 0.00253473 9.41341 6.39769e-05 9.05324C-0.00240677 8.69308 0.0667097 8.33602 0.203399 8.00279C0.340088 7.66957 0.541625 7.36682 0.796303 7.11215C1.05098 6.85747 1.35373 6.65593 1.68695 6.51924C2.02018 6.38255 2.37724 6.31344 2.7374 6.31591C3.09756 6.31838 3.45364 6.39239 3.78496 6.53363C4.11628 6.67488 4.41623 6.88055 4.66739 7.1387L9.04239 11.5137L19.7619 0.795734C20.1421 0.41574 20.6265 0.156988 21.1537 0.0521788C21.6809 -0.0526303 22.2274 0.00120817 22.7241 0.20689C23.2207 0.412571 23.6452 0.760865 23.944 1.20775C24.2427 1.65464 24.4023 2.18006 24.4025 2.71761Z"
+                        fill="white" />
+                </svg>
             </div>
 
             <h2>Payment Successful!</h2>
             <p>Your transaction has been completed. We look forward to welcoming you.</p>
 
-            <button class="verify-btn" id="goEventsBtn">
-               Go to Events
+            <button class="verify-btn" onclick="location.reload()">
+                Go to Events
             </button>
 
         </div>

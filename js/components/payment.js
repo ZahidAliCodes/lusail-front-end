@@ -8,7 +8,7 @@ const submitPaymentBtn = document.querySelector(".process-payment-btn");
 
 const paymentModal = document.getElementById("paymentSuccessModal");
 const closePaymentModal = document.getElementById("closePaymentModal");
-const goEventsBtn = document.getElementById("goEventsBtn");
+
 
 /* =========================
    SHOW PAYMENT AREA
@@ -78,7 +78,6 @@ if (submitPaymentBtn) {
         });
 
         if (!isValid) {
-            alert("Please fill all payment fields");
             return;
         }
 
@@ -112,17 +111,6 @@ if (paymentModal) {
 
     });
 }
-
-/* =========================
-   GO TO EVENTS
-========================= */
-
-if (goEventsBtn) {
-    goEventsBtn.addEventListener("click", () => {
-        window.location.href = "summary.html";
-    });
-}
-
 /* =========================
    ESC KEY CLOSE MODAL
 ========================= */
@@ -132,3 +120,5 @@ document.addEventListener("keydown", (e) => {
         paymentModal?.classList.remove("active");
     }
 });
+
+
