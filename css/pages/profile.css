@@ -220,6 +220,7 @@
 .item-info {
     flex: 1;
 }
+
 .item-title {
     font-weight: 400;
     font-size: 16px;
@@ -240,15 +241,16 @@
     cursor: pointer;
 }
 
-.nav-icon-bg{
+.nav-icon-bg {
     background: linear-gradient(135deg, rgba(255, 59, 74, 0.2) 0%, rgba(255, 59, 74, 0.05) 100%);
-
 }
-.aside-term-item{
+
+.aside-term-item {
     display: flex;
     gap: 16px;
     align-items: center;
 }
+
 .aside-terms {
     display: flex;
     justify-content: space-between;
@@ -265,7 +267,7 @@
     color: #FFFFFF;
 }
 
-.profile-main-card{
+.profile-main-card {
     background-color: #FFFFFF1A;
     border-radius: 3px;
     margin-bottom: 16px;
@@ -273,32 +275,37 @@
     border: 1px solid #26F0D233;
 }
 
-.profile-main-card h1{
+.profile-main-card h1 {
     font-weight: 800;
     font-size: 20px;
     line-height: 40px;
     color: #FFFFFF;
     margin: 0 0 24px 0;
 }
+
 .form-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px 16px;
     margin: 0 0 24px 0;
 }
-.form-grid-row-3{
+
+.form-grid-row-3 {
     display: grid;
     gap: 24px 16px;
     grid-template-columns: repeat(3, 1fr);
     align-items: end;
 }
+
 .full-width {
     grid-column: 1 / -1;
 }
-.phone-input-group,
-.form-grid-3 .select-trigger, .phone-input-group input, .form-group input{
-        background-color: #47486b;
 
+.phone-input-group,
+.form-grid-3 .select-trigger,
+.phone-input-group input,
+.form-group input {
+    background-color: #47486b;
 }
 
 .save-btn {
@@ -316,27 +323,32 @@
     margin-left: auto;
     display: block;
 }
+
 .full-width label span,
-.form-group label span{
+.form-group label span {
     color: #FF3B4A;
 }
 
-.select-trigger{
+.select-trigger {
     gap: 8px;
 }
+
 .u-nexus-upload-container {
     margin: 12px 0 0 0;
 }
+
 .vehicle-haeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-        margin: 0 0 24px 0;
+    margin: 0 0 24px 0;
 }
-.vehicle-haeader h1{
+
+.vehicle-haeader h1 {
     margin: 0;
 }
-.vehicle-haeader button{
+
+.vehicle-haeader button {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -350,17 +362,20 @@
 
 .table-container {
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
+
 table {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid #36415380;
-  color: #ffffff;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #36415380;
+    color: #ffffff;
+    min-width: 800px;
 }
 
 thead {
-  background-color: #FFFFFF1A;
+    background-color: #FFFFFF1A;
 }
 
 th {
@@ -370,9 +385,7 @@ th {
     color: #D1D5DC;
     letter-spacing: 0.5px;
     line-height: 20px;
-          font-family: Arial;
-
-
+    font-family: Arial;
     text-align: center;
 }
 
@@ -388,7 +401,7 @@ td {
 }
 
 tr:last-child td {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .btn-view {
@@ -414,8 +427,6 @@ tr:last-child td {
     width: 100%;
 }
 
-
-
 @media (max-width: 992px) {
     .profile-sidebar {
         width: 240px;
@@ -425,40 +436,8 @@ tr:last-child td {
         font-size: 24px;
     }
 }
+
 @media screen and (max-width: 768px) {
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
-
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-
-  tr {
-    margin-bottom: 15px;
-    border: 1px solid #3b3b61;
-  }
-
-  td {
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-    padding-left: 50%;
-    text-align: right;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    color: #a0a0c0;
-    text-transform: uppercase;
-    font-size: 12px;
-  }
     .profile-content {
         flex-direction: column;
     }
@@ -472,14 +451,73 @@ tr:last-child td {
     .profile-main {
         width: 100%;
     }
+
+    th {
+        padding: 14px 12px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    td {
+        padding: 12px 12px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .form-grid-row-3,
+    .form-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .profile-hero {
+        height: 250px;
+    }
+
+    .bg-right-img .container h1 {
+        top: 32%;
+    }
+
+    .profile-main-card {
+        padding: 20px;
+    }
+
+    .notification-box h2 {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 480px) {
+    .profile-hero {
+        height: 220px;
+    }
+
+    .bg-right-img .container h1 {
+        top: 34%;
+    }
+
+    .aside-terms {
+        font-size: 14px;
+    }
+
     .profile-wrapper {
         padding: 12px;
     }
 
     .profile-header h1 {
         font-size: 20px;
+    }
+
+    th {
+        padding: 10px 8px;
+        font-size: 11px;
+    }
+
+    td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    .notification-box h2 {
+        font-size: 13px;
     }
 }

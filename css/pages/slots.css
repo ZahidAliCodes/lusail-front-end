@@ -200,20 +200,127 @@ z-index: 2;
   background-color: #F5F5F5;
 }
 
-/* --- RESPONSIVE BREAKPOINT --- */
+
+/* =========================
+   TABLET & BELOW (MAIN FIX)
+========================= */
 @media (max-width: 992px) {
   .main-wrapper {
     flex-direction: column;
+    gap: 20px;
   }
 
   .table-wrapper {
     order: 1;
+    width: 100%;
   }
 
   .summary-sidebar {
     order: 2;
-    width: auto; 
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* =========================
+   TABLET SMALL IMPROVEMENTS
+========================= */
+@media (max-width: 768px) {
+
+  .main-wrapper {
+    padding: 10px;
   }
 
- 
+  .summary-sidebar {
+    padding: 14px;
+    border-radius: 6px;
+  }
+
+  .total-amount {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .value {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .label {
+    font-size: 13px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .info-group {
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+  }
+
+  .summary-sidebar img {
+    width: 140px;
+    opacity: 0.6;
+  }
+}
+
+/* =========================
+   MOBILE (STRONG FIX)
+========================= */
+@media (max-width: 576px) {
+
+  .main-wrapper {
+    padding: 8px;
+    gap: 15px;
+  }
+
+  .summary-sidebar {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .total-amount {
+    font-size: 20px;
+    padding-bottom: 16px;
+  }
+
+  .value {
+    font-size: 15px;
+  }
+
+  .label {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .summary-sidebar img {
+    width: 110px;
+    opacity: 0.4;
+  }
+}
+
+/* =========================
+   VERY SMALL DEVICES
+========================= */
+@media (max-width: 400px) {
+
+  .total-amount {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 9px;
+  }
+
+  .summary-sidebar img {
+    display: none; /* prevent layout overflow */
+  }
 }
