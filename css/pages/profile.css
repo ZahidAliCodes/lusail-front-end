@@ -520,4 +520,9 @@ tr:last-child td {
     .notification-box h2 {
         font-size: 13px;
     }
+
+    .vehicle-haeader{
+        gap: 8px;
+    flex-direction: column-reverse;
+    }
 }

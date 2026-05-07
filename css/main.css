@@ -875,7 +875,8 @@ input.error {
 
   .step-event h3,
   .back-nav {
-    font-size: 20px;
+    font-size: 17px;
+    gap: 8px;
   }
 
   .main-section {
@@ -920,4 +921,7 @@ input.error {
   .event-info .btn-container {
     width: 200px;
   }
+  .top-right {
+    width: 200px;
+}
 }
