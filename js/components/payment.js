@@ -1,4 +1,3 @@
-const payNowTrigger = document.getElementById("payNowTrigger");
 const paymentSelectionArea = document.getElementById("paymentSelectionArea");
 
 const lcscCheckbox = document.getElementById("lcscCheckbox");
@@ -14,18 +13,6 @@ const closePaymentModal = document.getElementById("closePaymentModal");
    SHOW PAYMENT AREA
 ========================= */
 
-if (payNowTrigger) {
-    payNowTrigger.addEventListener("click", function () {
-
-        if (!lcscCheckbox.checked || !rulesCheckbox.checked) {
-            alert("Please agree to all Terms and Conditions to proceed.");
-            return;
-        }
-
-        paymentSelectionArea.style.display = "block";
-        this.style.display = "none";
-    });
-}
 
 /* =========================
    PAYMENT METHOD SWITCH
@@ -121,4 +108,35 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
+// ELEMENTS
+const payNowTrigger = document.getElementById("payNowTrigger");
+const paymentPopup = document.getElementById("paymentPopup");
+const closePaymentPopup = document.getElementById("closePaymentPopup");
 
+// OPEN POPUP
+payNowTrigger.addEventListener("click", () => {
+    paymentPopup.classList.add("active");
+    document.body.classList.add("popup-open");
+});
+
+// CLOSE POPUP
+closePaymentPopup.addEventListener("click", () => {
+    paymentPopup.classList.remove("active");
+    document.body.classList.remove("popup-open");
+});
+
+// OUTSIDE CLICK CLOSE
+paymentPopup.addEventListener("click", (e) => {
+    if (e.target === paymentPopup) {
+        paymentPopup.classList.remove("active");
+        document.body.classList.remove("popup-open");
+    }
+});
+
+// ESC CLOSE
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        paymentPopup.classList.remove("active");
+        document.body.classList.remove("popup-open");
+    }
+});

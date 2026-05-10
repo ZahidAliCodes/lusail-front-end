@@ -101,18 +101,26 @@ document.querySelectorAll(".u-nexus-upload-container").forEach((container) => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const addVehicleBtn = document.getElementById("addVehicleBtn");
-  const vehicleTableSection = document.getElementById("vehicleTableSection");
-  const vehicleFormSection = document.getElementById("vehicleFormSection");
+const addVehicleBtn = document.getElementById("addVehicleBtn");
+const vehiclePopup = document.getElementById("vehiclePopup");
+const closeVehiclePopup = document.getElementById("closeVehiclePopup");
 
-  if (!addVehicleBtn || !vehicleTableSection || !vehicleFormSection) return;
+// OPEN POPUP
+addVehicleBtn.addEventListener("click", () => {
+    vehiclePopup.classList.add("active");
+    document.body.classList.add("popup-open");
+});
 
-  // ========================
-  // SHOW FORM / HIDE TABLE
-  // ========================
-  addVehicleBtn.addEventListener("click", () => {
-    vehicleTableSection.style.display = "none";
-    vehicleFormSection.style.display = "block";
-  });
+// CLOSE POPUP
+closeVehiclePopup.addEventListener("click", () => {
+    vehiclePopup.classList.remove("active");
+    document.body.classList.remove("popup-open");
+});
+
+// CLOSE ON OUTSIDE CLICK
+vehiclePopup.addEventListener("click", (e) => {
+    if (e.target === vehiclePopup) {
+        vehiclePopup.classList.remove("active");
+        document.body.classList.remove("popup-open");
+    }
 });
